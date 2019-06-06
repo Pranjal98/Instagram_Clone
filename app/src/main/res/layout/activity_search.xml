@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity">
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/topPanel"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:orientation="horizontal">-->
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:padding="15dp"
+        app:srcCompat="@drawable/search" />
+
+    <EditText
+        android:id="@+id/SearchItem"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_toEndOf="@+id/imageView4"
+        android:layout_toRightOf="@+id/imageView4"
+        android:layout_toLeftOf="@+id/ok"
+        android:layout_toStartOf="@+id/ok"
+        android:background="@drawable/white_button"
+        android:ems="10"
+        android:hint="Search"
+        android:inputType="textPersonName"
+        android:padding="5dp" />
+    <!--</LinearLayout>-->
+
+    <ImageButton
+        android:id="@+id/ok"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/white_button"
+        android:onClick="Search"
+        app:srcCompat="@drawable/rightarrow" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/SearchItem"
+        android:background="@drawable/line" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerSearch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/belowTab"
+        android:layout_below="@id/view5"
+        android:layout_marginTop="0dp"
+        android:scrollbars="vertical">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+    <View
+        android:id="@+id/belowTab"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/bottomNavigationProfile"
+        android:background="@drawable/line" />
+
+    <LinearLayout
+        android:id="@+id/bottomNavigationProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:weightSum="5"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/homeNotify"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@drawable/white_button"
+            android:onClick="homeActivity"
+            android:scaleType="fitXY"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            app:srcCompat="@drawable/home" />
+
+        <ImageButton
+            android:id="@+id/searchNewsFeed"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@id/homeNewsFeed"
+            android:layout_toRightOf="@id/homeNewsFeed"
+            android:layout_weight="1"
+            android:background="@drawable/white_button"
+            android:scaleType="fitXY"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            app:srcCompat="@drawable/search" />
+
+        <ImageButton
+            android:id="@+id/addNewsFeed"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@id/notifyNewsFeed"
+            android:layout_toLeftOf="@id/notifyNewsFeed"
+            android:layout_toEndOf="@id/searchNewsFeed"
+            android:layout_toRightOf="@id/searchNewsFeed"
+            android:layout_weight="1"
+            android:background="@drawable/white_button"
+            android:onClick="uploadActivity"
+            android:scaleType="fitXY"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            app:srcCompat="@drawable/add" />
+
+        <ImageButton
+            android:id="@+id/notifyNewsFeed"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@id/profNewsFeed"
+            android:layout_toLeftOf="@id/profNewsFeed"
+            android:layout_weight="1"
+            android:background="@drawable/white_button"
+            android:onClick="notify"
+            android:scaleType="fitXY"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            app:srcCompat="@drawable/notify" />
+
+        <ImageButton
+            android:id="@+id/profNewsFeed"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@drawable/white_button"
+            android:onClick="profileActivity"
+            android:scaleType="fitXY"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            app:srcCompat="@drawable/prof" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

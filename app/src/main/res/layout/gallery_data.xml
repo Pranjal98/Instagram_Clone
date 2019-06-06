@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/galleryPostImgId"
+    android:layout_width="120dp"
+    android:layout_height="120dp"
+    android:clickable="true"
+    android:elevation="0dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/cardview_light_background"
+    app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_margin="1dp"
+            android:orientation="vertical"
+            android:weightSum="5">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/GalleryuserDpId"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="0"
+                    android:background="@color/whitea" />
+
+
+                <TextView
+                    android:id="@+id/GalleryUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0" />
+
+                <ImageView
+                    android:id="@+id/GalleryImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:background="@color/whitea"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/GalleryLikeCount"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="0"
+                    android:background="@color/whitea" />
+
+                <TextView
+                    android:id="@+id/GalleryCaption"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0" />
+
+                <TextView
+                    android:id="@+id/Gallerytime"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="0"
+                    android:textColor="@color/gray" />
+
+        </LinearLayout>
+
+</RelativeLayout>

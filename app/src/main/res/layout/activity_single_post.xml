@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/whitea"
+    app:cardBackgroundColor="@color/cardview_light_background"
+    android:elevation="0dp"
+    app:cardElevation="0dp">
+
+    <ImageButton
+        android:id="@+id/SinglePostCancel"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/white_button"
+        android:onClick="backFromSinglePost"
+        app:srcCompat="@drawable/left" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:padding="10dp"
+        android:text="Photo"
+        android:layout_toRightOf="@+id/SinglePostCancel"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/SinglePostCancel"
+        android:background="@drawable/line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view6"
+        android:layout_below="@+id/view5"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/whitea">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/SinglePostuserDpId"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/whitea" />
+
+                <TextView
+                    android:id="@+id/SinglePostuserNameId"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toRightOf="@+id/SinglePostuserDpId"
+                    android:layout_toLeftOf="@id/moreMenu"
+                    android:background="@color/whitea"
+                    android:padding="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/moreMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/more"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5" />
+
+                <ImageView
+                    android:id="@+id/SinglePostDescImgId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/SinglePostuserNameId"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:id="@+id/SinglePostbuttons"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/SinglePostDescImgId"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageButton
+                        android:id="@+id/SinglePostLikeButton"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_below="@id/SinglePostDescImgId"
+                        android:layout_alignParentLeft="true"
+                        android:layout_weight="1"
+                        android:background="@drawable/notify"
+                        android:onClick="SinglePostLikeButton"
+                        android:scaleType="fitXY"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7" />
+
+                    <ImageButton
+                        android:id="@+id/SinglePostCommentButton"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_below="@id/SinglePostDescImgId"
+                        android:layout_toRightOf="@id/SinglePostLikeButton"
+                        android:layout_weight="1"
+                        android:background="@drawable/comment"
+                        android:onClick="SinglePostCommentButton"
+                        android:scaleType="fitXY"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/SinglePostLikeCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/SinglePostbuttons"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/whitea"
+                    android:paddingRight="5dp"
+                    android:text="0"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/SinglePostlikes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/SinglePostbuttons"
+                    android:layout_toRightOf="@id/SinglePostLikeCount"
+                    android:background="@color/whitea"
+                    android:paddingRight="5dp"
+                    android:text="likes"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/SinglePostuserNameIId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/SinglePostLikeCount"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/whitea"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/SinglePostcontentDescId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/SinglePostLikeCount"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/SinglePostuserNameIId"
+                    android:background="@color/whitea"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/SinglePosttime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/SinglePostcontentDescId"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="Just Now"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/bottomNavigationNewsFeed"
+        android:background="@drawable/line" />
+
+    <LinearLayout
+        android:id="@+id/bottomNavigationNewsFeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <ImageButton
+            android:id="@+id/homeNotify"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@drawable/white_button"
+            android:onClick="homeActivity"
+            android:scaleType="fitXY"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:visibility="visible"
+            app:srcCompat="@drawable/home" />
+
+        <ImageButton
+            android:id="@+id/searchNewsFeed"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@id/homeNewsFeed"
+            android:layout_toRightOf="@id/homeNewsFeed"
+            android:layout_weight="1"
+            android:background="@drawable/white_button"
+            android:onClick="searchActivity"
+            android:scaleType="fitXY"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            app:srcCompat="@drawable/search" />
+
+        <ImageButton
+            android:id="@+id/addNewsFeed"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@id/notifyNewsFeed"
+            android:layout_toLeftOf="@id/notifyNewsFeed"
+            android:layout_toEndOf="@id/searchNewsFeed"
+            android:layout_toRightOf="@id/searchNewsFeed"
+            android:layout_weight="1"
+            android:background="@drawable/white_button"
+            android:onClick="uploadActivity"
+            android:scaleType="fitXY"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            app:srcCompat="@drawable/add" />
+
+        <ImageButton
+            android:id="@+id/notifyNewsFeed"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@id/profNewsFeed"
+            android:layout_toLeftOf="@id/profNewsFeed"
+            android:layout_weight="1"
+            android:background="@drawable/white_button"
+            android:onClick="notify"
+            android:scaleType="fitXY"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            app:srcCompat="@drawable/notify" />
+
+        <ImageButton
+            android:id="@+id/profNewsFeed"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@drawable/white_button"
+            android:onClick="profileActivity"
+            android:scaleType="fitXY"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            app:srcCompat="@drawable/prof" />
+
+    </LinearLayout>
+
+</RelativeLayout>

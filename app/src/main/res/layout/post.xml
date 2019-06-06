@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitea"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/cardview_light_background"
+    android:elevation="0dp"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/whitea">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userDpId"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/whitea" />
+
+        <TextView
+            android:id="@+id/userNameId"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toLeftOf="@id/moreMenu"
+            android:layout_toRightOf="@+id/userDpId"
+            android:background="@color/whitea"
+            android:padding="5dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/moreMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/more"
+            android:scaleX="0.5"
+            android:scaleY="0.5" />
+
+        <ImageView
+            android:id="@+id/DescImgId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userNameId"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_below="@id/DescImgId"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageButton
+                android:id="@+id/LikeButton"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/DescImgId"
+                android:layout_alignParentLeft="true"
+                android:layout_weight="1"
+                android:background="@drawable/notify"
+                android:scaleType="fitXY"
+                android:scaleX="0.7"
+                android:scaleY="0.7" />
+
+            <ImageButton
+                android:id="@+id/CommentButton"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/DescImgId"
+                android:layout_toRightOf="@id/LikeButton"
+                android:layout_weight="1"
+                android:background="@drawable/comment"
+                android:scaleType="fitXY"
+                android:scaleX="0.7"
+                android:scaleY="0.7" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/LikeCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttons"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/whitea"
+            android:paddingRight="5dp"
+            android:text="0"
+            android:textColor="@color/colorAccent"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/likes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttons"
+            android:layout_toRightOf="@id/LikeCount"
+            android:background="@color/whitea"
+            android:paddingRight="5dp"
+            android:text="likes"
+            android:textColor="@color/colorAccent"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/userNameIId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LikeCount"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/whitea"
+            android:paddingRight="5dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/contentDescId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/LikeCount"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/userNameIId"
+            android:background="@color/whitea"
+            android:paddingRight="5dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contentDescId"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:text="Just Now"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white_button"
+
+
+    android:id="@+id/newsfeed"
+    tools:context=".NewsFeed">
+
+    <ImageButton
+        android:id="@+id/camera"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1"
+        android:background="@drawable/white_button"
+        android:onClick="camera"
+        android:padding="10dp"
+        app:srcCompat="@drawable/photo" />
+
+    <ImageView
+        android:id="@+id/insta"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+
+        app:srcCompat="@drawable/insta" />
+
+    <ImageButton
+        android:id="@+id/message"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_weight="1"
+        android:background="@drawable/white_button"
+        android:onClick="message"
+        android:padding="10dp"
+        app:srcCompat="@drawable/share" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/camera"
+            android:background="@drawable/line" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view6"
+        android:layout_below="@id/view5"
+        android:layout_marginTop="0dp"
+        android:scrollbars="vertical">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/bottomNavigationNewsFeed"
+        android:background="@drawable/line" />
+
+    <LinearLayout
+        android:id="@+id/bottomNavigationNewsFeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:weightSum="5"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/homeNewsFeed"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@drawable/white_button"
+            android:scaleType="fitXY"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:visibility="visible"
+            app:srcCompat="@drawable/home" />
+
+        <ImageButton
+            android:id="@+id/searchNewsFeed"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@id/homeNewsFeed"
+            android:layout_toRightOf="@id/homeNewsFeed"
+            android:layout_weight="1"
+            android:background="@drawable/white_button"
+            android:onClick="searchActivity"
+            android:scaleType="fitXY"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            app:srcCompat="@drawable/search" />
+
+        <ImageButton
+            android:id="@+id/addNewsFeed"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@id/notifyNewsFeed"
+            android:layout_toLeftOf="@id/notifyNewsFeed"
+            android:layout_toEndOf="@id/searchNewsFeed"
+            android:layout_toRightOf="@id/searchNewsFeed"
+            android:layout_weight="1"
+            android:background="@drawable/white_button"
+            android:onClick="uploadActivity"
+            android:scaleType="fitXY"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            app:srcCompat="@drawable/add" />
+
+        <ImageButton
+            android:id="@+id/notifyNewsFeed"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@id/profNewsFeed"
+            android:layout_toLeftOf="@id/profNewsFeed"
+            android:layout_weight="1"
+            android:background="@drawable/white_button"
+            android:onClick="notify"
+            android:scaleType="fitXY"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            app:srcCompat="@drawable/notify" />
+
+        <ImageButton
+            android:id="@+id/profNewsFeed"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@drawable/white_button"
+            android:onClick="profileActivity"
+            android:scaleType="fitXY"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            app:srcCompat="@drawable/prof" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

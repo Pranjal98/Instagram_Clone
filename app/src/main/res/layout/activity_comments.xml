@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommentsActivity">
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/white_button"
+        android:onClick="back"
+        app:srcCompat="@drawable/left" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/back"
+        android:layout_toRightOf="@+id/back"
+        android:padding="10dp"
+        android:text="Comments"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/start"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/textView7"
+        android:background="@drawable/line" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerComment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/end"
+        android:layout_below="@id/start"
+        android:scrollbars="vertical">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <View
+        android:id="@+id/end"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/enteredComment"
+        android:background="@drawable/line" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/myDp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/circle"
+        android:scaleX="0.7"
+        android:scaleY="0.7" />
+
+    <EditText
+        android:id="@+id/enteredComment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/PostComment"
+        android:layout_toLeftOf="@+id/PostComment"
+        android:layout_toEndOf="@+id/myDp"
+        android:layout_toRightOf="@+id/myDp"
+        android:background="@drawable/white_button"
+        android:ems="10"
+        android:gravity="center|start"
+        android:hint="Add a comment..."
+        android:inputType="textMultiLine"
+        android:paddingLeft="10dp"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/PostComment"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/white_button"
+        android:onClick="PostComment"
+        android:text="Post"
+        android:textColor="@color/button" />
+</RelativeLayout>

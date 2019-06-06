@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NotificationActivity">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/whitea" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tab_layout"
+        android:background="@drawable/line" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/view6"
+        android:layout_below="@id/tab_layout"/>
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/bottomNavigationNewsFeed"
+        android:background="@drawable/line" />
+
+    <LinearLayout
+        android:id="@+id/bottomNavigationNewsFeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:weightSum="5"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/homeNotify"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@drawable/white_button"
+            android:onClick="homeActivity"
+            android:scaleType="fitXY"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:visibility="visible"
+            app:srcCompat="@drawable/home" />
+
+        <ImageButton
+            android:id="@+id/searchNotify"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@id/homeNotify"
+            android:layout_toRightOf="@id/homeNotify"
+            android:layout_weight="1"
+            android:background="@drawable/white_button"
+            android:onClick="searchActivity"
+            android:scaleType="fitXY"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            app:srcCompat="@drawable/search" />
+
+        <ImageButton
+            android:id="@+id/addNotify"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@id/notifyNotify"
+            android:layout_toLeftOf="@id/notifyNotify"
+            android:layout_toEndOf="@id/searchNotify"
+            android:layout_toRightOf="@id/searchNotify"
+            android:layout_weight="1"
+            android:background="@drawable/white_button"
+            android:onClick="uploadActivity"
+            android:scaleType="fitXY"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            app:srcCompat="@drawable/add" />
+
+        <ImageButton
+            android:id="@+id/notifyNotify"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@id/profNotify"
+            android:layout_toLeftOf="@id/profNotify"
+            android:layout_weight="1"
+            android:background="@drawable/white_button"
+            android:scaleType="fitXY"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            app:srcCompat="@drawable/notify" />
+
+        <ImageButton
+            android:id="@+id/profNotify"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@drawable/white_button"
+            android:onClick="profileActivity"
+            android:scaleType="fitXY"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            app:srcCompat="@drawable/prof" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

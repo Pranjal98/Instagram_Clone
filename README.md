@@ -1,0 +1,2 @@
+# Instagram_Clone
+it is a clone version of instagram (Firebase used for backend connectivity) containing limited features like log in sign up image share with captions like comment follow unfollow search deleting uploaded image. the app contains different intents like the real instagram (newsfeed, search, add, notification, profile) linked with those main extra intents are also there which are also required. like for login signup image upload comment others profile etc.
